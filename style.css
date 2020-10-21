@@ -1,0 +1,224 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.container{
+    display: block;
+    overflow-y: scroll;
+    position: relative; 
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar{
+    overflow: hidden;
+    display: flex;
+    color: white;
+    font-size: 1.5em;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    z-index: 1;
+}
+
+.navbar a {
+    margin-left: 60px;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.navbar:hover{
+    cursor: pointer;
+}
+
+.sizes{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.7em;
+}
+
+.dots{
+    padding: 0;
+    display: inline;
+    width: 320px;
+    height: 7.5px;
+    margin: 10px 0px 0px 10px;
+}
+.priceContainer{
+    display: flex;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100%;
+    scroll-snap-align: center;
+}
+
+section h1{
+   font-size: 4rem;
+}
+
+section p{
+    font-size: 1.5rem;
+}
+
+section#home{
+    height: 100vh;
+    position: relative;
+    color: white;
+    background-image: url('./images/pizza3.png')
+}
+
+#homeContainer{
+    position: absolute;
+    top: 230px;
+}
+
+#menuContainer{
+    
+    position: absolute;
+    top: 80px;
+    left: 60px;
+    display: grid;
+    grid-column-gap: 150px;
+    grid-template-columns: 2fr, 1fr, 2fr;
+}
+
+#menuGallery img{
+    margin: 15px 0px 15px 0px;
+    width: 220px;
+    height: 220px;
+    
+}
+
+#menuGallery{
+    grid-column:2/3;
+    justify-self: center;
+    text-align: center;
+}
+
+#traditional{
+   grid-column: 1/2;
+}
+
+#special{
+grid-column: 3/4;
+}
+
+#specialMenu{
+justify-self: left;    
+text-align: left;
+margin-top: 20px;
+}
+#traditionalMenu{
+margin-top: 20px;
+text-align: left;
+}
+
+#contactContainer{
+    position: absolute;
+    top: 100px;
+    left: 60px;
+}
+#reviewContainer{
+    position: absolute;
+    top: 100px;
+}
+
+#phoneContainer{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    right: 180px;
+    font-size: 1.5em;
+}
+#phoneImage{
+    width: 35px;
+    height: 35px;
+}
+
+#message{
+    font-family: inherit;
+    display: block;
+    text-align: left;
+    height: 300px;
+    width: 342px;
+    margin-top: 20px;
+}
+#contactForm input{
+    margin-right: 20px;
+    font-family: inherit;
+}
+#contactContent{
+    display: flex;
+
+}
+#contactContent ul, #contactContent h3{
+    margin-left: 200px;
+    list-style-type: none;
+}
+section#menu{
+    height: 900px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    display: block;
+    background-color: white;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+section#contactus{
+    text-align: left;
+    background-color: white;
+    position: relative;
+}
+
+section#reviews{
+    display: block;
+    background-color: white;
+    position: relative;
+    text-align: left;
+}
+
+.opaque{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: black;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    font-size: 1.5em;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+nav a.active{
+    color:red;
+}
+
+a.inverse{
+    color: black;
+}
+
+a.selected{
+    text-decoration: underline;
+}
