@@ -81,7 +81,7 @@ section#home{
     height: 100vh;
     position: relative;
     color: white;
-    background-image: url('./images/pizza3.png')
+    background-image: url('./images/pizzaBackground.png')
 }
 
 #homeContainer{
@@ -160,7 +160,6 @@ text-align: left;
     text-align: left;
     height: 300px;
     width: inherit;
-    
 }
 
 #name{
