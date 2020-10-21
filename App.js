@@ -1,9 +1,13 @@
-const viewHeight = window.innerHeight;
+
 const links = document.querySelectorAll('.navbar a')
 const nav = document.querySelector('nav')
 const sections = document.querySelectorAll('section')
 const home = document.querySelector('#home')
-console.log(viewHeight)
+const form = document.querySelector('form') 
+
+form.addEventListener("submit", (e) => e.preventDefault())
+
+
 const selectLink = (el) =>{
     const activeLinks = document.querySelectorAll('.navbar a.selected')
     activeLinks.forEach(activeLink => activeLink.classList.remove('selected'))
@@ -21,7 +25,7 @@ links.forEach(link => {
 )
 
 let options = {
-    threshold: 0.7
+    threshold: 0.5
 
 }
 
@@ -84,3 +88,4 @@ let HomeObserver = new IntersectionObserver(
 )
 
 HomeObserver.observe(home)
+
