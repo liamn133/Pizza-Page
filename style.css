@@ -1,0 +1,401 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container {
+	display: block;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	position: relative;
+	scroll-behavior: smooth;
+	scroll-snap-type: y proximity;
+	width: 100%;
+	height: 100%;
+}
+
+.navbar {
+	overflow: hidden;
+	display: flex;
+	color: white;
+	font-size: 1.5em;
+	position: fixed;
+	top: 50px;
+	left: 0px;
+	z-index: 1;
+	width: 100vw;
+}
+
+.navbar a {
+	margin-left: 60px;
+	text-decoration: none;
+	color: white;
+}
+
+.navbar:hover {
+	cursor: pointer;
+}
+
+.sizes {
+	padding: 7px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 1.7em;
+	background-color: rgba(233, 233, 233, 0.1);
+	box-shadow: 2px 2px 6px black;
+}
+
+.dots {
+	padding: 0;
+	display: inline;
+	width: 320px;
+	height: 7.5px;
+	margin: 10px 0px 0px 10px;
+}
+.priceContainer {
+	display: flex;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	min-height: 100%;
+	scroll-snap-align: center;
+	position: relative;
+}
+
+section h1 {
+	font-size: 4rem;
+}
+
+section p {
+	font-size: 1.5rem;
+}
+
+section#home {
+	height: 100vh;
+	position: relative;
+	color: white;
+	background-image: url("./images/pizzaBackground.png");
+	background-repeat: cover;
+	background-repeat: no-repeat;
+}
+
+#homeContainer {
+	position: absolute;
+	top: 230px;
+}
+
+#menuContainer {
+	position: absolute;
+	top: 80px;
+	left: 60px;
+	display: grid;
+	grid-column-gap: 150px;
+	grid-template-columns: 2fr, 1fr, 2fr;
+}
+
+#menuGallery img {
+	margin: 15px 0px 15px 0px;
+	width: 220px;
+	height: 220px;
+}
+
+#menuGallery {
+	grid-column: 2/3;
+	justify-self: center;
+	text-align: center;
+}
+
+#traditional {
+	grid-column: 1/2;
+}
+
+#special {
+	grid-column: 3/4;
+}
+
+#specialMenu {
+	justify-self: left;
+	text-align: left;
+	margin-top: 20px;
+}
+#traditionalMenu {
+	margin-top: 20px;
+	text-align: left;
+}
+
+#contactContainer {
+	position: absolute;
+	top: 100px;
+	left: 0px;
+}
+
+section#reviews {
+	display: block;
+	position: relative;
+	text-align: left;
+	color: black;
+	height: 100vh;
+}
+
+#reviewContainer {
+	position: absolute;
+	top: 0px;
+	left: 60px;
+	display: flex;
+}
+
+#reviewContainer p {
+	margin-bottom: 30px;
+}
+
+#reviewContent {
+	margin-right: 100px;
+	margin-top: 100px;
+}
+
+#phoneContainer {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 50px;
+	right: 180px;
+	font-size: 1.5em;
+}
+#phoneImage {
+	width: 35px;
+	height: 35px;
+}
+
+#message {
+	font-family: inherit;
+	grid-column: 1/3;
+	text-align: left;
+	height: 300px;
+	width: inherit;
+}
+
+#name {
+	grid-column: 1/2;
+}
+
+#lastName {
+	grid-column: 2/3;
+}
+
+#contactForm {
+	display: grid;
+	column-gap: 40px;
+	row-gap: 20px;
+	grid-column: repeat(2, 1fr);
+	width: 500px;
+	grid-column: 1/2;
+	grid-row-start: 1;
+	margin-left: 30px;
+}
+
+#contactInfo {
+	grid-column: 2/3;
+	grid-row-start: 1;
+	padding: 10px 40px 0px 20px;
+}
+
+#contactForm input {
+	max-height: 70px;
+	font-family: inherit;
+}
+#contactContent {
+	display: grid;
+	grid-column: repeat(2, 1fr);
+	column-gap: 300px;
+}
+#contactContent ul {
+	margin-top: 20px;
+	font-size: 1.3em;
+	line-height: 1.7em;
+	list-style-type: none;
+}
+#contactContent h3 {
+	font-size: 1.8em;
+}
+#contactus h1 {
+	margin-bottom: 40px;
+}
+section#menu {
+	height: 1000px;
+	text-align: left;
+	display: block;
+	background-color: white;
+	position: relative;
+	scroll-snap-align: start;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+section#contactus {
+	display: block;
+	text-align: left;
+
+	position: relative;
+	height: 1200px;
+}
+
+.opaque {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	color: black;
+	background-color: white;
+	width: 100%;
+	height: 70px;
+	font-size: 1.5em;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+nav a.active {
+	color: red;
+}
+
+a.inverse {
+	color: black;
+}
+
+a.selected {
+	text-decoration: underline;
+}
+
+.review {
+	line-height: 2em;
+}
+
+.curved-div {
+	background: #db413c;
+	color: #fff;
+	text-align: center;
+	overflow: hidden;
+	width: 100vw;
+}
+.curved-div svg {
+	display: block;
+
+	position: relative;
+}
+.curved-div.upper {
+	background: white;
+}
+
+.curved-div h1 {
+}
+
+.curved-div.black {
+}
+
+.flipped {
+	transform: rotate(0deg);
+}
+
+#reviewImg {
+	width: 600px;
+	margin-top: 120px;
+}
+
+@media (max-width: 1500px) {
+	#menuGallery img {
+		width: 180px;
+		height: 180px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.dots {
+		width: 400px;
+	}
+	#menuContainer {
+		display: block;
+	}
+	section#menu {
+		height: 1900px;
+	}
+	#menuGallery {
+		display: none;
+	}
+	#contactContent {
+		column-gap: 100px;
+	}
+	#reviewContainer {
+		flex-direction: column;
+	}
+
+	#reviewImgContainer {
+		margin-left: 0px;
+	}
+	#reviewImg {
+		margin-left: 0px;
+	}
+
+	@media (max-width: 992px) {
+		.navbar {
+			justify-content: space-evenly;
+			align-items: center;
+		}
+		.navbar a {
+			margin-left: 0;
+		}
+		#phoneContainer {
+			right: unset;
+			display: block;
+			align-items: flex-end;
+			width: 50vw;
+			margin-top: 70px;
+		}
+
+		#contactInfo {
+			grid-column: 1/2;
+			grid-row-start: 2;
+			margin-top: 50px;
+		}
+		section#contactus {
+			height: 1300px;
+		}
+		#contactForm {
+			width: 85vw;
+		}
+		#submitButton {
+			grid-column: 1/3;
+		}
+	}
+
+	@media (max-width: 800px) {
+		#reviewImg {
+			width: 400px;
+		}
+		#reviewContainer {
+			margin-bottom: 0px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.dots {
+			display: none;
+		}
+		#menuContainer {
+			width: 100vw;
+			display: block;
+		}
+		.sizes {
+			width: 50vw;
+		}
+	}
+}
