@@ -1,0 +1,22 @@
+{
+  "name": "pizza-page",
+  "version": "1.0.0",
+  "description": "Mock restaurant page",
+  "main": "App.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liamn133/Pizza-Page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liamn133/Pizza-Page/issues"
+  },
+  "homepage": "https://liamn133.github.io/Pizza-Page",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
